@@ -1,0 +1,5 @@
+The files under sql_testing/ are by the Polygon authors (Pinhan Zhao, Yuepeng Wang,
+Xinyu Wang; PLDI 2025) and are distributed under the Creative Commons Attribution 4.0
+International license (CC-BY-4.0), as stated in the metadata of Zenodo record
+10.5281/zenodo.15048096: https://creativecommons.org/licenses/by/4.0/
+They are included unmodified; see UPSTREAM.md and PATCHES.md.

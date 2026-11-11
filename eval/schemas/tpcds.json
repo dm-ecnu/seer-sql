@@ -1,0 +1,3776 @@
+{
+ "name": "tpcds",
+ "tables": [
+  {
+   "name": "customer_address",
+   "columns": [
+    {
+     "name": "ca_address_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ca_address_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "ca_street_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "ca_street_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "ca_street_type",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "ca_suite_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "ca_city",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "ca_county",
+     "type": "varchar",
+     "sql_type": "VARCHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "ca_state",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "ca_zip",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "ca_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "ca_gmt_offset",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ca_location_type",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "ca_address_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "customer_demographics",
+   "columns": [
+    {
+     "name": "cd_demo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cd_gender",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "cd_marital_status",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "cd_education_status",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "cd_purchase_estimate",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cd_credit_rating",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "cd_dep_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cd_dep_employed_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cd_dep_college_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "cd_demo_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "date_dim",
+   "columns": [
+    {
+     "name": "d_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "d_date_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "d_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "d_month_seq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_week_seq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_quarter_seq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_year",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_dow",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_moy",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_dom",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_qoy",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_fy_year",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_fy_quarter_seq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_fy_week_seq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_day_name",
+     "type": "varchar",
+     "sql_type": "CHAR(9)",
+     "not_null": false
+    },
+    {
+     "name": "d_quarter_name",
+     "type": "varchar",
+     "sql_type": "CHAR(6)",
+     "not_null": false
+    },
+    {
+     "name": "d_holiday",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_weekend",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_following_holiday",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_first_dom",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_last_dom",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_same_day_ly",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_same_day_lq",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "d_current_day",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_current_week",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_current_month",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_current_quarter",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "d_current_year",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "d_date_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "warehouse",
+   "columns": [
+    {
+     "name": "w_warehouse_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "w_warehouse_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "w_warehouse_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "w_warehouse_sq_ft",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "w_street_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "w_street_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "w_street_type",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "w_suite_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "w_city",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "w_county",
+     "type": "varchar",
+     "sql_type": "VARCHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "w_state",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "w_zip",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "w_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "w_gmt_offset",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "w_warehouse_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "ship_mode",
+   "columns": [
+    {
+     "name": "sm_ship_mode_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "sm_ship_mode_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "sm_type",
+     "type": "varchar",
+     "sql_type": "CHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "sm_code",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "sm_carrier",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "sm_contract",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "sm_ship_mode_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "time_dim",
+   "columns": [
+    {
+     "name": "t_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "t_time_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "t_time",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "t_hour",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "t_minute",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "t_second",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "t_am_pm",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "t_shift",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "t_sub_shift",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "t_meal_time",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "t_time_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "reason",
+   "columns": [
+    {
+     "name": "r_reason_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "r_reason_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "r_reason_desc",
+     "type": "varchar",
+     "sql_type": "CHAR(100)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "r_reason_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "income_band",
+   "columns": [
+    {
+     "name": "ib_income_band_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ib_lower_bound",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ib_upper_bound",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "ib_income_band_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "item",
+   "columns": [
+    {
+     "name": "i_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "i_item_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "i_rec_start_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "i_rec_end_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "i_item_desc",
+     "type": "varchar",
+     "sql_type": "VARCHAR(200)",
+     "not_null": false
+    },
+    {
+     "name": "i_current_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "i_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "i_brand_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "i_brand",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "i_class_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "i_class",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "i_category_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "i_category",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "i_manufact_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "i_manufact",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "i_size",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "i_formulation",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "i_color",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "i_units",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "i_container",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "i_manager_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "i_product_name",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "i_item_sk"
+   ],
+   "unique": [],
+   "foreign_keys": []
+  },
+  {
+   "name": "store",
+   "columns": [
+    {
+     "name": "s_store_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "s_store_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "s_rec_start_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "s_rec_end_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "s_closed_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_store_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "s_number_employees",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_floor_space",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_hours",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "s_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "s_market_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_geography_class",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "s_market_desc",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "s_market_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "s_division_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_division_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "s_company_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "s_company_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "s_street_number",
+     "type": "varchar",
+     "sql_type": "VARCHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "s_street_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "s_street_type",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "s_suite_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "s_city",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "s_county",
+     "type": "varchar",
+     "sql_type": "VARCHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "s_state",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "s_zip",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "s_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "s_gmt_offset",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    },
+    {
+     "name": "s_tax_precentage",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "s_store_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "s_closed_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "call_center",
+   "columns": [
+    {
+     "name": "cc_call_center_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cc_call_center_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "cc_rec_start_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "cc_rec_end_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "cc_closed_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_open_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cc_class",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cc_employees",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_sq_ft",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_hours",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "cc_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "cc_mkt_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_mkt_class",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cc_mkt_desc",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "cc_market_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "cc_division",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_division_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cc_company",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cc_company_name",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cc_street_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "cc_street_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "cc_street_type",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "cc_suite_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "cc_city",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "cc_county",
+     "type": "varchar",
+     "sql_type": "VARCHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "cc_state",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "cc_zip",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "cc_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "cc_gmt_offset",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cc_tax_percentage",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "cc_call_center_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "cc_closed_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cc_open_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "customer",
+   "columns": [
+    {
+     "name": "c_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "c_customer_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "c_current_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_current_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_current_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_first_shipto_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_first_sales_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_salutation",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "c_first_name",
+     "type": "varchar",
+     "sql_type": "CHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "c_last_name",
+     "type": "varchar",
+     "sql_type": "CHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "c_preferred_cust_flag",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "c_birth_day",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_birth_month",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_birth_year",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "c_birth_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "c_login",
+     "type": "varchar",
+     "sql_type": "CHAR(13)",
+     "not_null": false
+    },
+    {
+     "name": "c_email_address",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "c_last_review_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "c_customer_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "c_current_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "c_current_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "c_current_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "c_first_sales_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "c_first_shipto_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "web_site",
+   "columns": [
+    {
+     "name": "web_site_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "web_site_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "web_rec_start_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "web_rec_end_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "web_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "web_open_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "web_close_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "web_class",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "web_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "web_mkt_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "web_mkt_class",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "web_mkt_desc",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "web_market_manager",
+     "type": "varchar",
+     "sql_type": "VARCHAR(40)",
+     "not_null": false
+    },
+    {
+     "name": "web_company_id",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "web_company_name",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "web_street_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "web_street_name",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "web_street_type",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "web_suite_number",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "web_city",
+     "type": "varchar",
+     "sql_type": "VARCHAR(60)",
+     "not_null": false
+    },
+    {
+     "name": "web_county",
+     "type": "varchar",
+     "sql_type": "VARCHAR(30)",
+     "not_null": false
+    },
+    {
+     "name": "web_state",
+     "type": "varchar",
+     "sql_type": "CHAR(2)",
+     "not_null": false
+    },
+    {
+     "name": "web_zip",
+     "type": "varchar",
+     "sql_type": "CHAR(10)",
+     "not_null": false
+    },
+    {
+     "name": "web_country",
+     "type": "varchar",
+     "sql_type": "VARCHAR(20)",
+     "not_null": false
+    },
+    {
+     "name": "web_gmt_offset",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    },
+    {
+     "name": "web_tax_percentage",
+     "type": "numeric",
+     "sql_type": "DECIMAL(5, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "web_site_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "web_close_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "web_open_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "store_returns",
+   "columns": [
+    {
+     "name": "sr_returned_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_return_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "sr_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_store_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_reason_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_ticket_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "sr_return_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "sr_return_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_return_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_return_amt_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_fee",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_return_ship_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_refunded_cash",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_reversed_charge",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_store_credit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "sr_net_loss",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "sr_item_sk",
+    "sr_ticket_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "sr_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_reason_sk"
+     ],
+     "ref_table": "reason",
+     "ref_columns": [
+      "r_reason_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_returned_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_return_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_store_sk"
+     ],
+     "ref_table": "store",
+     "ref_columns": [
+      "s_store_sk"
+     ]
+    },
+    {
+     "columns": [
+      "sr_item_sk",
+      "sr_ticket_number"
+     ],
+     "ref_table": "store_sales",
+     "ref_columns": [
+      "ss_item_sk",
+      "ss_ticket_number"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "household_demographics",
+   "columns": [
+    {
+     "name": "hd_demo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "hd_income_band_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "hd_buy_potential",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "hd_dep_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "hd_vehicle_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "hd_demo_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "hd_income_band_sk"
+     ],
+     "ref_table": "income_band",
+     "ref_columns": [
+      "ib_income_band_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "web_page",
+   "columns": [
+    {
+     "name": "wp_web_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "wp_web_page_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "wp_rec_start_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "wp_rec_end_date",
+     "type": "date",
+     "sql_type": "DATE",
+     "not_null": false
+    },
+    {
+     "name": "wp_creation_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_access_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_autogen_flag",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "wp_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_url",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "wp_type",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "wp_char_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_link_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_image_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wp_max_ad_count",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "wp_web_page_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "wp_access_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wp_creation_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "promotion",
+   "columns": [
+    {
+     "name": "p_promo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "p_promo_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "p_start_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "p_end_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "p_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "p_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(15, 2)",
+     "not_null": false
+    },
+    {
+     "name": "p_response_target",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "p_promo_name",
+     "type": "varchar",
+     "sql_type": "CHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_dmail",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_email",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_catalog",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_tv",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_radio",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_press",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_event",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_demo",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    },
+    {
+     "name": "p_channel_details",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "p_purpose",
+     "type": "varchar",
+     "sql_type": "CHAR(15)",
+     "not_null": false
+    },
+    {
+     "name": "p_discount_active",
+     "type": "varchar",
+     "sql_type": "CHAR(1)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "p_promo_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "p_end_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "p_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "p_start_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "catalog_page",
+   "columns": [
+    {
+     "name": "cp_catalog_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cp_catalog_page_id",
+     "type": "varchar",
+     "sql_type": "CHAR(16)",
+     "not_null": true
+    },
+    {
+     "name": "cp_start_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cp_end_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cp_department",
+     "type": "varchar",
+     "sql_type": "VARCHAR(50)",
+     "not_null": false
+    },
+    {
+     "name": "cp_catalog_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cp_catalog_page_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cp_description",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    },
+    {
+     "name": "cp_type",
+     "type": "varchar",
+     "sql_type": "VARCHAR(100)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "cp_catalog_page_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "cp_end_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cp_start_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "inventory",
+   "columns": [
+    {
+     "name": "inv_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "inv_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "inv_warehouse_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "inv_quantity_on_hand",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "inv_date_sk",
+    "inv_item_sk",
+    "inv_warehouse_sk"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "inv_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "inv_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "inv_warehouse_sk"
+     ],
+     "ref_table": "warehouse",
+     "ref_columns": [
+      "w_warehouse_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "catalog_returns",
+   "columns": [
+    {
+     "name": "cr_returned_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_returned_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cr_refunded_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_refunded_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_refunded_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_refunded_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_returning_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_returning_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_returning_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_returning_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_call_center_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_catalog_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_ship_mode_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_warehouse_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_reason_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_order_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cr_return_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cr_return_amount",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_return_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_return_amt_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_fee",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_return_ship_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_refunded_cash",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_reversed_charge",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_store_credit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cr_net_loss",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "cr_item_sk",
+    "cr_order_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "cr_call_center_sk"
+     ],
+     "ref_table": "call_center",
+     "ref_columns": [
+      "cc_call_center_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_catalog_page_sk"
+     ],
+     "ref_table": "catalog_page",
+     "ref_columns": [
+      "cp_catalog_page_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_reason_sk"
+     ],
+     "ref_table": "reason",
+     "ref_columns": [
+      "r_reason_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_refunded_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_refunded_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_refunded_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_refunded_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returned_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returned_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returning_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returning_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returning_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_returning_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_ship_mode_sk"
+     ],
+     "ref_table": "ship_mode",
+     "ref_columns": [
+      "sm_ship_mode_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_warehouse_sk"
+     ],
+     "ref_table": "warehouse",
+     "ref_columns": [
+      "w_warehouse_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cr_item_sk",
+      "cr_order_number"
+     ],
+     "ref_table": "catalog_sales",
+     "ref_columns": [
+      "cs_item_sk",
+      "cs_order_number"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "web_returns",
+   "columns": [
+    {
+     "name": "wr_returned_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_returned_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "wr_refunded_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_refunded_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_refunded_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_refunded_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_returning_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_returning_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_returning_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_returning_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_web_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_reason_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_order_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "wr_return_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "wr_return_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_return_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_return_amt_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_fee",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_return_ship_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_refunded_cash",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_reversed_charge",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_account_credit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "wr_net_loss",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "wr_item_sk",
+    "wr_order_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "wr_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_reason_sk"
+     ],
+     "ref_table": "reason",
+     "ref_columns": [
+      "r_reason_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_refunded_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_refunded_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_refunded_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_refunded_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returned_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returned_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returning_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returning_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returning_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_returning_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_web_page_sk"
+     ],
+     "ref_table": "web_page",
+     "ref_columns": [
+      "wp_web_page_sk"
+     ]
+    },
+    {
+     "columns": [
+      "wr_item_sk",
+      "wr_order_number"
+     ],
+     "ref_table": "web_sales",
+     "ref_columns": [
+      "ws_item_sk",
+      "ws_order_number"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "web_sales",
+   "columns": [
+    {
+     "name": "ws_sold_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_sold_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ws_bill_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_bill_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_bill_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_bill_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_web_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_web_site_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_ship_mode_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_warehouse_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_promo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_order_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ws_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ws_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_discount_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_coupon_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_ext_ship_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_net_paid",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_net_paid_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_net_paid_inc_ship",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_net_paid_inc_ship_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ws_net_profit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "ws_item_sk",
+    "ws_order_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "ws_bill_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_bill_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_bill_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_bill_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_promo_sk"
+     ],
+     "ref_table": "promotion",
+     "ref_columns": [
+      "p_promo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_ship_mode_sk"
+     ],
+     "ref_table": "ship_mode",
+     "ref_columns": [
+      "sm_ship_mode_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_sold_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_sold_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_warehouse_sk"
+     ],
+     "ref_table": "warehouse",
+     "ref_columns": [
+      "w_warehouse_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_web_page_sk"
+     ],
+     "ref_table": "web_page",
+     "ref_columns": [
+      "wp_web_page_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ws_web_site_sk"
+     ],
+     "ref_table": "web_site",
+     "ref_columns": [
+      "web_site_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "catalog_sales",
+   "columns": [
+    {
+     "name": "cs_sold_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_sold_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_bill_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_bill_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_bill_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_bill_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_call_center_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_catalog_page_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_ship_mode_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_warehouse_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cs_promo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_order_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "cs_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "cs_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_discount_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_coupon_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_ext_ship_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_net_paid",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_net_paid_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_net_paid_inc_ship",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_net_paid_inc_ship_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "cs_net_profit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "cs_item_sk",
+    "cs_order_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "cs_bill_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_bill_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_bill_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_bill_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_call_center_sk"
+     ],
+     "ref_table": "call_center",
+     "ref_columns": [
+      "cc_call_center_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_catalog_page_sk"
+     ],
+     "ref_table": "catalog_page",
+     "ref_columns": [
+      "cp_catalog_page_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_promo_sk"
+     ],
+     "ref_table": "promotion",
+     "ref_columns": [
+      "p_promo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_ship_mode_sk"
+     ],
+     "ref_table": "ship_mode",
+     "ref_columns": [
+      "sm_ship_mode_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_sold_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_sold_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "cs_warehouse_sk"
+     ],
+     "ref_table": "warehouse",
+     "ref_columns": [
+      "w_warehouse_sk"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "store_sales",
+   "columns": [
+    {
+     "name": "ss_sold_date_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_sold_time_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_item_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ss_customer_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_cdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_hdemo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_addr_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_store_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_promo_sk",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_ticket_number",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": true
+    },
+    {
+     "name": "ss_quantity",
+     "type": "int",
+     "sql_type": "INT",
+     "not_null": false
+    },
+    {
+     "name": "ss_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_ext_discount_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_ext_sales_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_ext_wholesale_cost",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_ext_list_price",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_ext_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_coupon_amt",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_net_paid",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_net_paid_inc_tax",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    },
+    {
+     "name": "ss_net_profit",
+     "type": "numeric",
+     "sql_type": "DECIMAL(7, 2)",
+     "not_null": false
+    }
+   ],
+   "primary_key": [
+    "ss_item_sk",
+    "ss_ticket_number"
+   ],
+   "unique": [],
+   "foreign_keys": [
+    {
+     "columns": [
+      "ss_addr_sk"
+     ],
+     "ref_table": "customer_address",
+     "ref_columns": [
+      "ca_address_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_cdemo_sk"
+     ],
+     "ref_table": "customer_demographics",
+     "ref_columns": [
+      "cd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_customer_sk"
+     ],
+     "ref_table": "customer",
+     "ref_columns": [
+      "c_customer_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_hdemo_sk"
+     ],
+     "ref_table": "household_demographics",
+     "ref_columns": [
+      "hd_demo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_item_sk"
+     ],
+     "ref_table": "item",
+     "ref_columns": [
+      "i_item_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_promo_sk"
+     ],
+     "ref_table": "promotion",
+     "ref_columns": [
+      "p_promo_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_sold_date_sk"
+     ],
+     "ref_table": "date_dim",
+     "ref_columns": [
+      "d_date_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_sold_time_sk"
+     ],
+     "ref_table": "time_dim",
+     "ref_columns": [
+      "t_time_sk"
+     ]
+    },
+    {
+     "columns": [
+      "ss_store_sk"
+     ],
+     "ref_table": "store",
+     "ref_columns": [
+      "s_store_sk"
+     ]
+    }
+   ]
+  }
+ ],
+ "source": "gregrahn/tpcds-kit@5a3a817 tools/tpcds.sql+tpcds_ri.sql + spec composite FKs",
+ "checks": [],
+ "inclusions": [],
+ "enums": [],
+ "domains": [],
+ "unsupported": [],
+ "native": {}
+}

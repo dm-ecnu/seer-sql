@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# Resume frozen matrix schedulers when systemd-run --wait misses completion.
+set -euo pipefail
+args=()
+unit=
+previous=
+wait_seen=0
+for arg in "$@"; do
+ if [[ "$arg" == --wait ]]; then wait_seen=$((wait_seen+1)); continue; fi
+ if [[ "$previous" == --unit ]]; then unit=$arg; fi
+ if [[ "$arg" == --unit=* ]]; then unit=${arg#--unit=}; fi
+ args+=("$arg")
+ previous=$arg
+done
+[[ "$wait_seen" == 1 && -n "$unit" && "$1" == --user ]] || {
+ echo 'completion shim only accepts systemd-run --user --wait --unit' >&2
+ exit 2
+}
+output=${!#}
+[[ "$output" == ${ICDE_ROOT}/* ]] || {
+ echo "completion shim refuses output outside /data: $output" >&2
+ exit 2
+}
+/usr/bin/systemd-run "${args[@]}"
+seconds=0
+inactive=0
+unknown_with_output=0
+while true; do
+ state=$(/usr/bin/systemctl --user show "$unit.service" -p ActiveState --value 2>/dev/null || true)
+ if [[ "$state" == active || "$state" == activating || "$state" == deactivating ]]; then
+  inactive=0
+  unknown_with_output=0
+ elif [[ "$state" == inactive || "$state" == failed ]]; then
+  inactive=$((inactive+5))
+  unknown_with_output=0
+  if (( inactive >= 5 )) && { test -s "$output/result.json" || test -s "$output/raw.jsonl"; }; then
+   exit 0
+  fi
+  if (( inactive >= 30 )); then
+   echo "completion shim: service ended without nonempty result: $unit" >&2
+   exit 1
+  fi
+ else
+  # A failed D-Bus observation is not evidence that a live leaf ended.
+  inactive=0
+  if test -s "$output/result.json" || test -s "$output/raw.jsonl"; then
+   unknown_with_output=$((unknown_with_output+5))
+   if (( unknown_with_output >= 10 )); then exit 0; fi
+  else
+   unknown_with_output=0
+  fi
+ fi
+ sleep 5
+ seconds=$((seconds+5))
+ if (( seconds == 930 )); then
+  echo "completion shim: still waiting after 930 s: $unit" >&2
+ fi
+done

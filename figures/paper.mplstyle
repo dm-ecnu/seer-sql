@@ -1,0 +1,44 @@
+# Paper figures at print size. plt.style.use(os.path.expanduser("~/.claude/skills/paper-figures/assets/paper.mplstyle"))
+# Single column by default (3.33 in); for figure* pass figsize=(7.0, h). Never scale the PDF in LaTeX.
+
+figure.figsize        : 3.33, 2.1
+figure.constrained_layout.use : True
+savefig.format        : pdf
+savefig.bbox          : tight
+savefig.pad_inches    : 0.02
+
+# Type 42 (TrueType) instead of matplotlib's default Type 3: IEEE PDF eXpress, ACM and ScholarOne reject Type 3
+pdf.fonttype          : 42
+ps.fonttype           : 42
+
+# printed sizes; ICML: in-figure text no smaller than the caption (8-9 pt in ACM/IEEE templates)
+font.family           : sans-serif
+font.sans-serif       : Helvetica, Arial, DejaVu Sans
+font.size             : 8
+axes.titlesize        : 8
+axes.labelsize        : 8
+xtick.labelsize       : 7.5
+ytick.labelsize       : 7.5
+legend.fontsize       : 7.5
+legend.title_fontsize : 8
+mathtext.fontset      : dejavusans
+
+# Okabe-Ito (colour-blind safe), first five at 3:1 or more on white (WCAG 1.4.11), the light three last, cycled with markers and line styles,
+# so series stay distinct in grayscale print as well
+axes.prop_cycle       : (cycler('color', ['0072B2', 'D55E00', '000000', '009E73', 'CC79A7', 'E69F00', '56B4E9', 'F0E442']) + cycler('marker', ['o', 's', '^', 'D', 'v', 'P', 'X', '*']) + cycler('linestyle', ['-', '--', '-.', ':', '-', '--', '-.', ':']))
+lines.linewidth       : 1.2
+lines.markersize      : 3.5
+axes.linewidth        : 0.6
+grid.linewidth        : 0.4
+grid.alpha            : 0.4
+xtick.major.width     : 0.6
+ytick.major.width     : 0.6
+xtick.major.size      : 2.5
+ytick.major.size      : 2.5
+axes.spines.top       : False
+axes.spines.right     : False
+
+legend.frameon        : False
+legend.handlelength   : 2.2
+legend.borderaxespad  : 0.2
+legend.columnspacing  : 1.0

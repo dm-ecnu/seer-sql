@@ -1,0 +1,387 @@
+{
+  "created": 1794016184.1266162,
+  "source_commit": "6a7e8eebfee3b9416a851c9b35aa505828031941",
+  "bird_hard_bytes": 2147483648,
+  "max_concurrent_workers": 60,
+  "tree_rss_sample": {
+    "started": 1794015958.1415946,
+    "finished": 1794016138.9389565,
+    "sampling_interval_s": 1,
+    "samples": 177,
+    "groups": {
+      "c69-prod-bird-g2105.scope": {
+        "peak_tree_rss_bytes": 378671104,
+        "peak_tree_hwm_bytes": 385372160,
+        "cgroup_memory_peak_bytes": 206028800,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 82,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2099.scope": {
+        "peak_tree_rss_bytes": 233213952,
+        "peak_tree_hwm_bytes": 238895104,
+        "cgroup_memory_peak_bytes": 495247360,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 29,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2115.scope": {
+        "peak_tree_rss_bytes": 376057856,
+        "peak_tree_hwm_bytes": 384020480,
+        "cgroup_memory_peak_bytes": 205111296,
+        "methods_seen": [
+          "parseval",
+          "sqlwitness"
+        ],
+        "samples": 177,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2109.scope": {
+        "peak_tree_rss_bytes": 378060800,
+        "peak_tree_hwm_bytes": 384147456,
+        "cgroup_memory_peak_bytes": 207859712,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 93,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2096.scope": {
+        "peak_tree_rss_bytes": 411668480,
+        "peak_tree_hwm_bytes": 418725888,
+        "cgroup_memory_peak_bytes": 490332160,
+        "methods_seen": [
+          "parseval"
+        ],
+        "samples": 147,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2112.scope": {
+        "peak_tree_rss_bytes": 383356928,
+        "peak_tree_hwm_bytes": 392237056,
+        "cgroup_memory_peak_bytes": 211992576,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 46,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2097.scope": {
+        "peak_tree_rss_bytes": 406081536,
+        "peak_tree_hwm_bytes": 413323264,
+        "cgroup_memory_peak_bytes": 490577920,
+        "methods_seen": [
+          "parseval",
+          "sqlwitness"
+        ],
+        "samples": 118,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2113.scope": {
+        "peak_tree_rss_bytes": 383168512,
+        "peak_tree_hwm_bytes": 391950336,
+        "cgroup_memory_peak_bytes": 211906560,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 35,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2107.scope": {
+        "peak_tree_rss_bytes": 376393728,
+        "peak_tree_hwm_bytes": 384528384,
+        "cgroup_memory_peak_bytes": 203481088,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 84,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2110.scope": {
+        "peak_tree_rss_bytes": 383463424,
+        "peak_tree_hwm_bytes": 392470528,
+        "cgroup_memory_peak_bytes": 209833984,
+        "methods_seen": [
+          "parseval"
+        ],
+        "samples": 177,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2098.scope": {
+        "peak_tree_rss_bytes": 232849408,
+        "peak_tree_hwm_bytes": 239181824,
+        "cgroup_memory_peak_bytes": 493121536,
+        "methods_seen": [
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 23,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2114.scope": {
+        "peak_tree_rss_bytes": 384569344,
+        "peak_tree_hwm_bytes": 396423168,
+        "cgroup_memory_peak_bytes": 276406272,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 59,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2108.scope": {
+        "peak_tree_rss_bytes": 397320192,
+        "peak_tree_hwm_bytes": 403521536,
+        "cgroup_memory_peak_bytes": 226226176,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 80,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2101.scope": {
+        "peak_tree_rss_bytes": 380936192,
+        "peak_tree_hwm_bytes": 391843840,
+        "cgroup_memory_peak_bytes": 214765568,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 110,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2095.scope": {
+        "peak_tree_rss_bytes": 407158784,
+        "peak_tree_hwm_bytes": 414175232,
+        "cgroup_memory_peak_bytes": 493219840,
+        "methods_seen": [
+          "parseval"
+        ],
+        "samples": 162,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2111.scope": {
+        "peak_tree_rss_bytes": 396967936,
+        "peak_tree_hwm_bytes": 405143552,
+        "cgroup_memory_peak_bytes": 290025472,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 27,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2116.scope": {
+        "peak_tree_rss_bytes": 15515648,
+        "peak_tree_hwm_bytes": 15515648,
+        "cgroup_memory_peak_bytes": 9019392,
+        "methods_seen": [],
+        "samples": 162,
+        "max_processes": 1
+      },
+      "c69-prod-bird-g2117.scope": {
+        "peak_tree_rss_bytes": 568967168,
+        "peak_tree_hwm_bytes": 623489024,
+        "cgroup_memory_peak_bytes": 523132928,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 91,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2118.scope": {
+        "peak_tree_rss_bytes": 568299520,
+        "peak_tree_hwm_bytes": 626683904,
+        "cgroup_memory_peak_bytes": 521175040,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 92,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2119.scope": {
+        "peak_tree_rss_bytes": 571539456,
+        "peak_tree_hwm_bytes": 623415296,
+        "cgroup_memory_peak_bytes": 521162752,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 90,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2120.scope": {
+        "peak_tree_rss_bytes": 379207680,
+        "peak_tree_hwm_bytes": 389562368,
+        "cgroup_memory_peak_bytes": 207245312,
+        "methods_seen": [
+          "parseval",
+          "sqlwitness"
+        ],
+        "samples": 142,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2121.scope": {
+        "peak_tree_rss_bytes": 577380352,
+        "peak_tree_hwm_bytes": 624934912,
+        "cgroup_memory_peak_bytes": 527077376,
+        "methods_seen": [
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 131,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2122.scope": {
+        "peak_tree_rss_bytes": 250359808,
+        "peak_tree_hwm_bytes": 258760704,
+        "cgroup_memory_peak_bytes": 140955648,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 118,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2123.scope": {
+        "peak_tree_rss_bytes": 15310848,
+        "peak_tree_hwm_bytes": 15310848,
+        "cgroup_memory_peak_bytes": 9019392,
+        "methods_seen": [],
+        "samples": 97,
+        "max_processes": 1
+      },
+      "c69-prod-bird-g2124.scope": {
+        "peak_tree_rss_bytes": 15273984,
+        "peak_tree_hwm_bytes": 15273984,
+        "cgroup_memory_peak_bytes": 9089024,
+        "methods_seen": [],
+        "samples": 95,
+        "max_processes": 1
+      },
+      "c69-prod-bird-g2125.scope": {
+        "peak_tree_rss_bytes": 568061952,
+        "peak_tree_hwm_bytes": 627113984,
+        "cgroup_memory_peak_bytes": 521531392,
+        "methods_seen": [
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 93,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2126.scope": {
+        "peak_tree_rss_bytes": 300412928,
+        "peak_tree_hwm_bytes": 308834304,
+        "cgroup_memory_peak_bytes": 201510912,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 84,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2127.scope": {
+        "peak_tree_rss_bytes": 300486656,
+        "peak_tree_hwm_bytes": 308936704,
+        "cgroup_memory_peak_bytes": 201715712,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 67,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2128.scope": {
+        "peak_tree_rss_bytes": 15269888,
+        "peak_tree_hwm_bytes": 15269888,
+        "cgroup_memory_peak_bytes": 9007104,
+        "methods_seen": [],
+        "samples": 63,
+        "max_processes": 1
+      },
+      "c69-prod-bird-g2129.scope": {
+        "peak_tree_rss_bytes": 376414208,
+        "peak_tree_hwm_bytes": 385183744,
+        "cgroup_memory_peak_bytes": 202104832,
+        "methods_seen": [
+          "parseval",
+          "seer_stream_sqlwitness",
+          "sqlwitness"
+        ],
+        "samples": 59,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2131.scope": {
+        "peak_tree_rss_bytes": 275472384,
+        "peak_tree_hwm_bytes": 290099200,
+        "cgroup_memory_peak_bytes": 185401344,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 58,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2130.scope": {
+        "peak_tree_rss_bytes": 439685120,
+        "peak_tree_hwm_bytes": 514412544,
+        "cgroup_memory_peak_bytes": 407498752,
+        "methods_seen": [
+          "seer_stream_sqlwitness"
+        ],
+        "samples": 58,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2132.scope": {
+        "peak_tree_rss_bytes": 377511936,
+        "peak_tree_hwm_bytes": 387330048,
+        "cgroup_memory_peak_bytes": 204124160,
+        "methods_seen": [
+          "parseval"
+        ],
+        "samples": 30,
+        "max_processes": 6
+      },
+      "c69-prod-bird-g2133.scope": {
+        "peak_tree_rss_bytes": 379625472,
+        "peak_tree_hwm_bytes": 387948544,
+        "cgroup_memory_peak_bytes": 206487552,
+        "methods_seen": [
+          "parseval"
+        ],
+        "samples": 15,
+        "max_processes": 6
+      }
+    },
+    "sampled_groups": 34,
+    "tree_rss_p99_bytes": 577380352,
+    "tree_rss_max_bytes": 577380352,
+    "scope": "Sum VmRSS over cgroup processes and descendants; shared pages may be counted twice. No method executions added."
+  },
+  "completed_group_count": 2118,
+  "completed_group_max_process_p99_bytes": 1091698688,
+  "completed_group_max_process_max_bytes": 1122328576,
+  "sizing_p99_bytes": 1091698688,
+  "sizing_rule": "max(2 GiB, ceil(1.5 * max(tree-RSS P99, historical process-RSS P99))); nearest-rank P99",
+  "scope": "New BIRD groups only; live scopes retain their original limits. All children remain in the group MemoryMax scope.",
+  "admission": "Idle physical-core lease unchanged; all active scope hard limits + 2 GiB coordinator <= MemAvailable/2 at admission.",
+  "controller_sha256": "d2502feab827c28569b41a3cb74030f422b8f6fad1d8804627af65034e76e353",
+  "resource_wrapper_sha256": "a9b17a6df5f4533a0cfce6059843d030f1b7b9c544816f0645aa6e8c1baffae4",
+  "matrix_sha256": "4dc4dbedfc08b1c0a2eab31183996f9adec2810a41dbb3b8b7e73d919d68998b"
+}

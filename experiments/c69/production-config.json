@@ -1,0 +1,17 @@
+{
+  "freeze": {
+    "tag": "c69-objective-6a7e8eebfee3",
+    "source_commit": "6a7e8eebfee3b9416a851c9b35aa505828031941",
+    "gate": "$SEER_ROOT/repro/c69-objective-v2/development/result.json",
+    "gate_sha256": "ba7763c646ca4fabb2b349558aa3d988f64bdc87e33e4eeabfad99cd4feef124",
+    "formal_launch": false
+  },
+  "source_commit": "6a7e8eebfee3b9416a851c9b35aa505828031941",
+  "controller_sha256": "c5022ddd63f69a9fb1f4ebf127af2a8f73e3541f1f06a9afe1c5e30cbfd48fac",
+  "formal_units": 700,
+  "ablation_units": 2520,
+  "bird_units": 23010,
+  "budget_decision": "codex-69.md supplement, explicitly confirmed by author continuation",
+  "memory_rule": "worker hard limits + 2 GiB controller <= current MemAvailable / 2",
+  "max_concurrent_workers": 32
+}

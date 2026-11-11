@@ -1,0 +1,3 @@
+seer.sqlancer.SeerSQLite3Provider
+seer.sqlancer.SeerPostgresProvider
+seer.sqlancer.SeerMySQLProvider

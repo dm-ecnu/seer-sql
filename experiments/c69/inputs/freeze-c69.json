@@ -1,0 +1,7 @@
+{
+  "tag": "c69-objective-6a7e8eebfee3",
+  "source_commit": "6a7e8eebfee3b9416a851c9b35aa505828031941",
+  "gate": "$SEER_ROOT/repro/c69-objective-v2/development/result.json",
+  "gate_sha256": "ba7763c646ca4fabb2b349558aa3d988f64bdc87e33e4eeabfad99cd4feef124",
+  "formal_launch": false
+}
