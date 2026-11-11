@@ -17,8 +17,8 @@ This repository is the code supplement of the ICDE 2027 submission
 *SEER: Partition Refinement for Batch SQL Equivalence Checking*; the paper's
 main comparison is reproduced as described in
 [Reproducing the main comparison](#reproducing-the-main-comparison). Proofs and the
-full experimental protocol are in the supplementary material (submitted as a
-separate PDF).
+full experimental protocol are in the supplementary material,
+`supplementary/SEER-supplementary.pdf` in this repository.
 
 ---
 
@@ -178,5 +178,5 @@ half of `MemAvailable`.
   of this snapshot.
 - The LLM-generated TPC-H rewrite files of the early prototype (`data/rewrites.jsonl`,
   `data/seer2_tpch_batch.jsonl`) are not included; `eval/build/gen_rewrites.py` regenerates them.
-- No license has been chosen for the SEER code yet. `vendor/polygon/` remains
-  under CC-BY-4.0 by its authors.
+- The SEER code is released under the Apache License 2.0 (`LICENSE`); `vendor/polygon/`
+  remains under CC-BY-4.0 by its authors.
