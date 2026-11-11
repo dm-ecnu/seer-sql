@@ -14,8 +14,11 @@ contribution is how a batch decides which comparisons reach these engines and
 how one counterexample database is reused across the whole batch.
 
 This repository is the code supplement of the ICDE 2027 submission
-*SEER: Partition Refinement for Batch SQL Equivalence Checking*. Proofs and the
-full experimental protocol are in the paper's appendix file.
+*SEER: Partition Refinement for Batch SQL Equivalence Checking*; the paper's
+main comparison is reproduced as described in
+[Reproducing the main comparison](#reproducing-the-main-comparison). Proofs and the
+full experimental protocol are in the supplementary material (submitted as a
+separate PDF).
 
 ---
 
